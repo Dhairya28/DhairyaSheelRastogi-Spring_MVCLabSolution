@@ -52,7 +52,7 @@
             <td>${student.country}</td>
             <td>
               <a class="btn btn-warning" href="update?id=${student.id}">Update</a> |
-              <a class="btn btn-danger" href="delete?id=${student.id}">Delete</a>
+              <a class="btn btn-danger" onclick="if(!(confirm('Are you sure to delete this student?'))) return false" href="delete?id=${student.id}">Delete</a>
             </td>
           </tr>
         </tbody>

@@ -28,8 +28,6 @@ public class StudentController {
 		return "student-list";
 	}
 
-
-
 	@GetMapping("showStudentForm")
 	public String showStudentForm(Model model) {
 		Student student =new Student();
@@ -48,7 +46,6 @@ public class StudentController {
 	public String updateStudent(Model model,
 			@RequestParam("id") int id) {
 		 Student student = studentDao.findById(id);
-		 System.out.println(student);
 		 model.addAttribute("student", student);
 		return "student-form";
 	}

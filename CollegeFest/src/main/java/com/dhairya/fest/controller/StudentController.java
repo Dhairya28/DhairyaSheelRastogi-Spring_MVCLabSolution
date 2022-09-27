@@ -47,7 +47,7 @@ public class StudentController {
 			@RequestParam("id") int id) {
 		 Student student = studentDao.findById(id);
 		 model.addAttribute("student", student);
-		return "student-form";
+		return "student-update-form";
 	}
 
 
